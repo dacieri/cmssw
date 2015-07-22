@@ -6,7 +6,7 @@
 #include "EventFilter/L1TRawToDigi/interface/PackerTokens.h"
 
 namespace l1t {
-   namespace stage2 {
+   namespace phase2 {
       class TrackTokens : public PackerTokens {
          public:
             TrackTokens(const edm::ParameterSet&, edm::ConsumesCollector&);

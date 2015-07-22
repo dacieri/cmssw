@@ -5,7 +5,7 @@
 #include "TrackTokens.h"
 
 namespace l1t {
-   namespace stage2 {
+   namespace phase2 {
       TrackTokens::TrackTokens(const edm::ParameterSet& cfg, edm::ConsumesCollector& cc) : PackerTokens(cfg, cc)
       {
          auto tag = cfg.getParameter<edm::InputTag>("InputLabel");

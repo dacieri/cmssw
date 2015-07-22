@@ -5,7 +5,7 @@
 #include "TrackCollections.h"
 
 namespace l1t {
-   namespace stage2 {
+   namespace phase2 {
       class StubUnpacker : public Unpacker {
          public:
             virtual bool unpack(const Block& block, UnpackerCollections *coll) override;
@@ -16,7 +16,7 @@ namespace l1t {
 // Implementation
 
 namespace l1t {
-namespace stage2 {
+namespace phase2 {
    bool
    StubUnpacker::unpack(const Block& block, UnpackerCollections *coll)
    {
@@ -95,4 +95,4 @@ namespace stage2 {
 }
 }
 
-DEFINE_L1T_UNPACKER(l1t::stage2::StubUnpacker);
+DEFINE_L1T_UNPACKER(l1t::phase2::StubUnpacker);

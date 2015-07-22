@@ -3,7 +3,7 @@
 #include "TrackCollections.h"
 
 namespace l1t {
-   namespace stage2 {
+   namespace phase2 {
       TrackCollections::~TrackCollections()
       {
          event_.put(stubs_);

@@ -9,7 +9,7 @@
 #include "TrackTokens.h"
 
 namespace l1t {
-   namespace stage2 {
+   namespace phase2 {
       class TrackSetup : public PackingSetup {
          public:
             virtual std::unique_ptr<PackerTokens> registerConsumes(const edm::ParameterSet& cfg, edm::ConsumesCollector& cc) override {
@@ -24,7 +24,7 @@ namespace l1t {
                if (fed == 1366) {
                   // Use board id 1 for packing
                   res[{1, 1}] = {
-                     //PackerFactory::get()->make("stage2::StubPacker"),
+                     //PackerFactory::get()->make("phase2::StubPacker"),
                      
                   };
                }
@@ -42,7 +42,7 @@ namespace l1t {
             };
 
             virtual UnpackerMap getUnpackers(int fed, int board, int amc, unsigned int fw) override {
-               auto stubs_unp = UnpackerFactory::get()->make("stage2::StubUnpacker");
+               auto stubs_unp = UnpackerFactory::get()->make("phase2::StubUnpacker");
                
                UnpackerMap res;
                if (fed == 1360){
@@ -56,4 +56,4 @@ namespace l1t {
    }
 }
 
-DEFINE_L1T_PACKING_SETUP(l1t::stage2::TrackSetup);
+DEFINE_L1T_PACKING_SETUP(l1t::phase2::TrackSetup);

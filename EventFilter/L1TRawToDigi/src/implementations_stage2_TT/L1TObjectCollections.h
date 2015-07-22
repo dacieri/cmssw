@@ -6,7 +6,7 @@
 #include "EventFilter/L1TRawToDigi/interface/UnpackerCollections.h"
 
 namespace l1t {
-   namespace stage2 {
+   namespace phase2 {
      class L1TObjectCollections : public UnpackerCollections {
        public:
          L1TObjectCollections(edm::Event& e) :

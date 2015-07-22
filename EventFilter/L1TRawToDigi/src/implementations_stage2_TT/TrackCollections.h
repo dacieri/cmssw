@@ -8,7 +8,7 @@
 #include "L1TObjectCollections.h"
 
 namespace l1t {
-   namespace stage2 {
+   namespace phase2 {
      class TrackCollections : public L1TObjectCollections {
          public:
             TrackCollections(edm::Event& e) :
