@@ -21,6 +21,7 @@
 #include "DataFormats/L1Trigger/interface/L1HFRings.h"
 #include "DataFormats/L1Trigger/interface/L1HFRingsFwd.h"
 #include "DataFormats/L1Trigger/interface/L1TriggerError.h"
+#include "DataFormats/L1Trigger/interface/Stub.h"
 #include "DataFormats/Common/interface/Wrapper.h"
 #include "DataFormats/Common/interface/RefVector.h"
 #include "DataFormats/Common/interface/RefProd.h"
@@ -36,6 +37,8 @@ namespace {
      l1extra::L1EtMissParticleCollection etMissColl ;
      l1extra::L1ParticleMapCollection mapColl ;
      l1extra::L1HFRingsCollection hfRingsColl ;
+     std::vector<l1t::Stub> StubColl;
+
 
      edm::Wrapper<l1extra::L1EmParticleCollection> w_emColl;
      edm::Wrapper<l1extra::L1JetParticleCollection> w_jetColl;
@@ -45,6 +48,9 @@ namespace {
      edm::Wrapper<l1extra::L1EtMissParticleCollection> w_etMissColl;
      edm::Wrapper<l1extra::L1ParticleMapCollection> w_mapColl;
      edm::Wrapper<l1extra::L1HFRingsCollection> w_hfRingsColl;
+
+     edm::Wrapper<std::vector<l1t::Stub> > w_StubColl;
+
 
      l1extra::L1EmParticleRef refEm ;
      l1extra::L1JetParticleRef refJet ;

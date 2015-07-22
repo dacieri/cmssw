@@ -21,8 +21,10 @@
    <version ClassVersion="10" checksum="72905536"/>
   </class>
   <class name="l1extra::L1HFRings" ClassVersion="10">
-   <version ClassVersion="10" checksum="3430623962"/>
+  <version ClassVersion="10" checksum="3430623962"/>
   </class>
+  <class name="l1t::Stub"/>
+
   <class name="std::vector<l1extra::L1EmParticle>"/>
   <class name="std::vector<l1extra::L1JetParticle>"/>
   <class name="std::vector<l1extra::L1MuonParticle>"/>
@@ -30,6 +32,8 @@
   <class name="std::vector<l1extra::L1EtMissParticle>"/>
   <class name="std::vector<l1extra::L1ParticleMap>"/>
   <class name="std::vector<l1extra::L1HFRings>"/>
+  <class name="std::vector<l1t::Stub>"/>
+
   <class name="edm::Wrapper<std::vector<l1extra::L1EmParticle> >"/>
   <class name="edm::Wrapper<std::vector<l1extra::L1JetParticle> >"/>
   <class name="edm::Wrapper<std::vector<l1extra::L1MuonParticle> >"/>
@@ -38,6 +42,9 @@
   <class name="edm::Wrapper<std::vector<l1extra::L1EtMissParticle> >"/>
   <class name="edm::Wrapper<std::vector<l1extra::L1ParticleMap> >"/>
   <class name="edm::Wrapper<std::vector<l1extra::L1HFRings> >"/>
+
+  <class name="edm::Wrapper<std::vector<l1t::Stub> >"/>
+
 
   <class name="edm::Ref<std::vector<l1extra::L1EmParticle>,l1extra::L1EmParticle,edm::refhelper::FindUsingAdvance<std::vector<l1extra::L1EmParticle>,l1extra::L1EmParticle> >"/>
   <class name="edm::Ref<std::vector<l1extra::L1JetParticle>,l1extra::L1JetParticle,edm::refhelper::FindUsingAdvance<std::vector<l1extra::L1JetParticle>,l1extra::L1JetParticle> >"/>
@@ -97,6 +104,8 @@
   </class>
   <class name="std::vector<L1TriggerError>"/>
   <class name="edm::Wrapper<std::vector<L1TriggerError> >"/>
+
+
 
 
 </lcgdict>
