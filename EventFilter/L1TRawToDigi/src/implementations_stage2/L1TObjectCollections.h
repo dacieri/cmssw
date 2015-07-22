@@ -1,7 +1,10 @@
 #ifndef L1TCollections_h
 #define L1TCollections_h
 
-#include "DataFormats/L1Trigger/interface/Stub.h"
+#include "DataFormats/L1Trigger/interface/EGamma.h"
+#include "DataFormats/L1Trigger/interface/EtSum.h"
+#include "DataFormats/L1Trigger/interface/Jet.h"
+#include "DataFormats/L1Trigger/interface/Tau.h"
 
 #include "EventFilter/L1TRawToDigi/interface/UnpackerCollections.h"
 
@@ -13,8 +16,10 @@ namespace l1t {
            UnpackerCollections(e) { };
 	 virtual ~L1TObjectCollections() ;
 
-	 virtual StubBxCollection* getStubs() = 0;
-	 
+	 virtual EGammaBxCollection* getEGammas() = 0;
+	 virtual EtSumBxCollection* getEtSums() = 0;
+	 virtual JetBxCollection* getJets() = 0;
+	 virtual TauBxCollection* getTaus() = 0;
 	 
       };
    }

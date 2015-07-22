@@ -1,0 +1,988 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"stubs",
+				"stubs_unp"
+			],
+			[
+				"phiS",
+				"phiS_multiplier"
+			],
+			[
+				"Rho",
+				"RhoMultiplier	(CfiFile_cfi.py)"
+			],
+			[
+				"Dp",
+				"DphiMultiplier	(CfiFile_cfi.py)"
+			],
+			[
+				"Rt",
+				"RtMultiplier	(CfiFile_cfi.py)"
+			],
+			[
+				"get",
+				"getParameter"
+			],
+			[
+				"rt_",
+				"rt_multiplier_	(Settings.h)"
+			],
+			[
+				"z_",
+				"z_multiplier_	(Settings.h)"
+			],
+			[
+				"phis_",
+				"phiS_multiplier_"
+			],
+			[
+				"getDphi",
+				"getDphiMultiplier	(InputData.cc)"
+			],
+			[
+				"set",
+				"settings"
+			],
+			[
+				"dp",
+				"dphi_bin_size"
+			],
+			[
+				"rt",
+				"rt_bin_size"
+			],
+			[
+				"z",
+				"z_bin_size"
+			],
+			[
+				"senso",
+				"sensorSpacing"
+			],
+			[
+				"In",
+				"InputPatternCreator	(CfiFile_cfi.py)"
+			],
+			[
+				"Inpu",
+				"InputPattern"
+			],
+			[
+				"sett",
+				"settings_"
+			],
+			[
+				"settings",
+				"settings	(InputData.cc)"
+			],
+			[
+				"hwSe",
+				"hwSegment	(HwStub.h)"
+			],
+			[
+				"Data",
+				"DataCorrection	(Settings.cc)"
+			],
+			[
+				"data",
+				"dataCorrection_"
+			],
+			[
+				"hws",
+				"hwstub"
+			],
+			[
+				"dphi_b",
+				"dphi_bin_size"
+			],
+			[
+				"rho",
+				"rho_bin_size"
+			],
+			[
+				"getRho",
+				"getRhoLowLimit"
+			],
+			[
+				"sectors",
+				"sectors_bits_	(Settings.cc)"
+			],
+			[
+				"Sect",
+				"SectorsBits	(CfiFile_cfi.py)"
+			],
+			[
+				"Da",
+				"DataFormats_"
+			],
+			[
+				"sect",
+				"sectors	(CfiFile_cfi.py)"
+			],
+			[
+				"int",
+				"int32"
+			],
+			[
+				"getRt",
+				"getRtLowLimit	(InputData.cc)"
+			],
+			[
+				"getZ",
+				"getZLowLimit"
+			],
+			[
+				"Bend",
+				"bendResolution_"
+			],
+			[
+				"bend",
+				"bendResolution_	(Settings.h)"
+			],
+			[
+				"getPhiS",
+				"getPhiBits"
+			],
+			[
+				"bin",
+				"bin_size_phiS"
+			],
+			[
+				"Hw",
+				"HwStub"
+			],
+			[
+				"cho",
+				"chosenRofPhi_"
+			],
+			[
+				"getC",
+				"getChosenRofPhi"
+			],
+			[
+				"Chosen",
+				"ChosenRofPhi	(CfiFile_cfi.py)"
+			],
+			[
+				"hwSeg",
+				"hwSegment_"
+			],
+			[
+				"hwD",
+				"hwDphi"
+			],
+			[
+				"hwRh",
+				"hwRho_"
+			],
+			[
+				"hwS",
+				"hwSegment_"
+			],
+			[
+				"hwR",
+				"hwRho"
+			],
+			[
+				"Con",
+				"ConfFile_cff	(ConfFile_cfg.py)"
+			],
+			[
+				"setR",
+				"setRerr_	(HwStub.h)"
+			],
+			[
+				"rerr",
+				"rErr_	(HwStub.cc)"
+			],
+			[
+				"io",
+				"iomanip	(InputPatternCreator.h)"
+			],
+			[
+				"hwB",
+				"hwBend_"
+			],
+			[
+				"hwZ",
+				"hwZ_"
+			],
+			[
+				"hw",
+				"hwPhi_"
+			],
+			[
+				"Mi",
+				"minPt_"
+			],
+			[
+				"getNP",
+				"getNPhiSectors	(Sectors.cc)"
+			],
+			[
+				"getN",
+				"getNEtaRegions"
+			],
+			[
+				"D",
+				"DataFormats"
+			],
+			[
+				"Eta",
+				"EtaRegion	(CfiFile_cfi.py)"
+			],
+			[
+				"Phi",
+				"PhiSectors_"
+			],
+			[
+				"As",
+				"AssumedPhiTrkRes	(CfiFile_cfi.py)"
+			],
+			[
+				"do",
+				"double"
+			],
+			[
+				"UseS",
+				"UseStubPhi	(CfiFile_cfi.py)"
+			],
+			[
+				"Use",
+				"UseStubPhi_	(Settings.h)"
+			],
+			[
+				"O",
+				"OutputSpec_"
+			],
+			[
+				"Et",
+				"EtaRegions"
+			],
+			[
+				"Ou",
+				"OutputSpec	(CfiFile_cfi.py)"
+			],
+			[
+				"A",
+				"AssumedPhiTrkRes_"
+			],
+			[
+				"chosen",
+				"chosenRofPhi_	(Sectors.cc)"
+			],
+			[
+				"UseStub",
+				"UseStubPhiTrk	(CfiFile_cfi.py)"
+			],
+			[
+				"Ph",
+				"PhiSectors	(CfiFile_cfi.py)"
+			],
+			[
+				"Get",
+				"GetEntries"
+			],
+			[
+				"h_t",
+				"h_tracks_reg_eta"
+			],
+			[
+				"hoy",
+				"hough_y_max"
+			],
+			[
+				"c_m",
+				"c_max"
+			],
+			[
+				"Res",
+				"ResCorrection	(TMTrackFinderAlgorithm.cc)"
+			],
+			[
+				"c_min",
+				"c_min2"
+			],
+			[
+				"Fill",
+				"FillDavideHists"
+			],
+			[
+				"vH",
+				"vHTrzs"
+			],
+			[
+				"h_ce",
+				"h_cells_pt	(TMTFHTHistograms.h)"
+			],
+			[
+				"h_cell",
+				"h_cells_phi	(TMTFHTHistograms.h)"
+			],
+			[
+				"his",
+				"hists_afterHTrz_"
+			],
+			[
+				"eta",
+				"eta0"
+			],
+			[
+				"h_cells",
+				"h_cells_eta	(TMTFHTHistograms.h)"
+			],
+			[
+				"hi",
+				"hists_afterHTrz_"
+			],
+			[
+				"v",
+				"vHTrzs"
+			],
+			[
+				"con",
+				"const_iterator"
+			],
+			[
+				"Goo",
+				"vGoodTPs"
+			],
+			[
+				"seg",
+				"segid"
+			],
+			[
+				"h_acc",
+				"h_acc_cells0"
+			],
+			[
+				"GetC",
+				"GetCandidates"
+			],
+			[
+				"h_to",
+				"h_tot_acc_cells"
+			],
+			[
+				"H",
+				"HoughTF"
+			],
+			[
+				"Ge",
+				"GetCellId"
+			],
+			[
+				"pu",
+				"push_back"
+			],
+			[
+				"cell",
+				"cell_ids"
+			],
+			[
+				"hough",
+				"hough_y_max"
+			],
+			[
+				"old",
+				"old_bin1"
+			],
+			[
+				"F",
+				"FakeRate"
+			],
+			[
+				"h_fake",
+				"h_fake_rate"
+			],
+			[
+				"ns",
+				"nsecondary"
+			],
+			[
+				"event",
+				"eventId"
+			],
+			[
+				"pdg",
+				"pdgId"
+			],
+			[
+				"Ho",
+				"hough_pt_"
+			],
+			[
+				"stu",
+				"stub_settings"
+			],
+			[
+				"st",
+				"stub_settings"
+			],
+			[
+				"B",
+				"BROKEN_LAYER_"
+			],
+			[
+				"fSu",
+				"fSubDirStubHS"
+			],
+			[
+				"fS",
+				"fSubDirCandHS"
+			],
+			[
+				"Set",
+				"SetTitle"
+			],
+			[
+				"mg_",
+				"mg_barrel"
+			],
+			[
+				"TM",
+				"TMultigraph"
+			],
+			[
+				"U",
+				"Unmatched"
+			],
+			[
+				"h_d",
+				"h_duplicate"
+			],
+			[
+				"h",
+				"h_duplicate"
+			],
+			[
+				"TG",
+				"TGraph"
+			],
+			[
+				"leg_",
+				"leg_endcap"
+			],
+			[
+				"p_eff_",
+				"p_eff_endcap"
+			],
+			[
+				"h_eff_etaphi_",
+				"h_eff_etaphi_endcap"
+			],
+			[
+				"h_stub_Et",
+				"h_stub_EtaPhiPt"
+			],
+			[
+				"TH",
+				"TH3D"
+			],
+			[
+				"pt",
+				"pt_bins"
+			],
+			[
+				"candidate",
+				"Candidates"
+			],
+			[
+				"GetM",
+				"GetMeanError"
+			],
+			[
+				"h_",
+				"h_candidate"
+			],
+			[
+				"Th",
+				"TH1D"
+			],
+			[
+				"T",
+				"TMultiGraph"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"g_",
+				"g_eff"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Remove Package"
+			],
+			[
+				"SVN:U",
+				"SVN: Upgrade to Newer Working Copy Format"
+			],
+			[
+				"chec",
+				"SVN: Checkout…"
+			],
+			[
+				"package contr",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"package control",
+				"Package Control: Add Repository"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/dc14947/Mount/Demo/CMSSW_6_2_0_SLHC26_patch3/src"
+	],
+	"file_history":
+	[
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/interface/InputData.h",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/interface/DataCorrection.h",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/src/Settings.cc",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/interface/Settings.h",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/Producer/plugins/Producer.cc",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/src/HwStub.cc",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/README_InputPattern.txt",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/python/InputPatter_cff.py",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/interface/InputPatternCreator.h",
+		"/Users/dc14947/Desktop/inputpattern.cc",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/src/Sectors.cc",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/interface/Sectors.h",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/interface/HwStub.h",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/src/InputData.cc",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/src/InputPatternCreator.cc",
+		"/Users/dc14947/Mount/Demonstrator/CMSSW_6_2_0_SLHC25_patch4/src/InputPattern/InputPatternCreator/python/ConfFile_cfg.py",
+		"/Users/dc14947/Mount/Tracking2/CMSSW_6_2_0_SLHC25_patch3/src/TMTrackTrigger/TMTrackFinder/interface/TMTrackFinderAlgorithm.h",
+		"/Users/dc14947/Mount/Tracking2/CMSSW_6_2_0_SLHC25_patch3/src/TMTrackTrigger/TMTrackFinder/interface/TMTrackFinder.h",
+		"/Users/dc14947/Mount/Tracking2/CMSSW_6_2_0_SLHC25_patch3/src/TMTrackTrigger/TMTrackFinder/src/TMTrackFinder.cc",
+		"/Users/dc14947/Mount/TMT/CMSSW_6_2_0_SLHC26/src/TMTrackTrigger/TMTrackFinder/interface/TMTFHoughTransformBase.h",
+		"/Users/dc14947/Mount/TMT/CMSSW_6_2_0_SLHC26/src/Samples/MuonsPt/PU160.txt",
+		"/Users/dc14947/Mount/TMT/CMSSW_6_2_0_SLHC26/src/Samples/MuonsPt/PU140.txt",
+		"/Users/dc14947/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/dc14947/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/dc14947/Mount/TMT/CMSSW_6_2_0_SLHC26/src/TMTrackTrigger/TMTrackFinder/interface/TMTFHTInputs.h",
+		"/Users/dc14947/Downloads/Davide-release-2.2.1.r336/analysis_C_cfg.py",
+		"/Users/dc14947/Google Drive/Work/Tracking/RootSum.cc",
+		"/Users/dc14947/Downloads/Davide-release-2.2.1.r336/tmtt_tf_TMTFHTrphiAnalyzerDavide_cfg.py",
+		"/private/var/folders/nv/skclgpm154gcc5c2ms7d557h0000gn/T/349cab3b-ec24-4f85-94ca-18ac0d45c7c5/net/home/ppd/nlk16165/Tracking2/CMSSW_6_2_0_SLHC25_patch3/src/tmtt_tf_analysis_cfg.py",
+		"/private/var/folders/nv/skclgpm154gcc5c2ms7d557h0000gn/T/349cab3b-ec24-4f85-94ca-18ac0d45c7c5/net/home/ppd/nlk16165/Tracking2/CMSSW_6_2_0_SLHC25_patch3/src/TMTrackTrigger/TMTrackFinder/src/TMTrackFinderAlgorithm.cc",
+		"/private/var/folders/nv/skclgpm154gcc5c2ms7d557h0000gn/T/349cab3b-ec24-4f85-94ca-18ac0d45c7c5/net/home/ppd/nlk16165/Tracking2/CMSSW_6_2_0_SLHC25_patch3/src/TMTrackTrigger/TMTrackFinder/src/TMTrackFinder.cc",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/ThomasHancockEx3Code/PhysicsProblem1Code.c",
+		"/Users/dc14947/Google Drive/Work/Talks/15:05:22 Elba/Abstract.txt",
+		"/Users/dc14947/Google Drive/Work/Tracking/datasets.txt",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/Hughes/Hughes.c",
+		"/Users/dc14947/Downloads/README_TMTrackTrigger.txt",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/NathanJohn_Exercise3/NathanJohn_Exercise3_Part2.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/NathanJohn_Exercise3/NathanJohn_Exercise3_Part1.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/Jaworzyn/random angle rejection sampling.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/Jaworzyn/random angle inversion sampling.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/Jaworzyn/nuclear modelling.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/Hewitt/Hewitt.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/Llewellyn/Ex3 Part 2.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/Llewellyn/EX3 CODE Part1.c",
+		"/Users/dc14947/Google Drive/Work/Tracking/TMTrackTriggerDavide/TMTrackTrigger/TMTrackFinder/src/TMTrackFinder.cc",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 3/ThomasHancockEx3Code/PhysicsProblem2Code.c",
+		"/Users/dc14947/Google Drive/Work/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/src/TMTFHTrphiAnalyzer.cc",
+		"/Users/dc14947/Google Drive/Work/Davide_3/TMTrackTrigger/TMTrackFinder/interface/TMTFHTrphi.h",
+		"/Users/dc14947/Google Drive/Work/Davide_3/TMTrackTrigger/TMTrackFinder/interface/TMTFHTGeometry.h",
+		"/Users/dc14947/Google Drive/Work/Davide_3/TMTrackTrigger/TMTrackFinder/interface/HTrphiCustomized2.h",
+		"/Users/dc14947/Google Drive/Work/Davide_3/TMTrackTrigger/TMTrackFinder/interface/TMTFHTrphiHistograms.icc",
+		"/Users/dc14947/Google Drive/Work/Davide_3/TMTrackTrigger/TMTrackFinder/interface/TMTFHTrphiHistograms.h",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/tmtt_tf_analysis_cfg.py",
+		"/var/folders/nv/skclgpm154gcc5c2ms7d557h0000gn/T/sublime-svn-1428484445/SVN",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/src/TMTFHTUtility.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/src/TMTFHoughTransformBase.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/interface/TMTFHoughTransformBase.h",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/interface/TMTFHTrphi.h",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/interface/TMTFHTrphiParameters.h",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/interface/TMTFHTrphiCell.h",
+		"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/trunk/README_TMTrackTrigger.txt",
+		"/Users/dc14947/Downloads/simple.C",
+		"/Users/dc14947/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/E5589D82-446E-42A6-9587-C0FD6CAC789B/samples.txt",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Tingey/main.c",
+		"/Users/dc14947/Downloads/Submitting Code/Potential Plots/main.c",
+		"/Users/dc14947/Downloads/Submitting Code/Iron Rod/main.c",
+		"/Users/dc14947/Downloads/Android/README.txt",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Russell/exercise 2 part two diffusion.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Russell/exercise 2 part one electric field and potentials.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Russell/exercise 2 part two diffusion.txt",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Russell/exercise 2 part one electric field and potentials.txt",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Rowley/ProblemTwo.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Rowley/ProblemOne.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Moulding/Differentials.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Morgan-Cooper/ex1.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Morgan-Cooper/ex2.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Mothershaw/ex2.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Moggride_joseph/laplace_final.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Moggride_joseph/diffusion_final.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 2/Moggride_joseph/capacitor_final.c",
+		"/Users/dc14947/Library/Caches/Cleanup At Startup/Transmit/A57CA5AA-8BA2-4484-A0BF-FB0F553EDB10/TMTrackFinderAlgorithm.h",
+		"/Users/dc14947/Library/Caches/Cleanup At Startup/Transmit/534CE70B-3E7E-4CAE-B770-929C340F7E42/TMTrackFinderAlgorithm.cc",
+		"/Users/dc14947/Library/Caches/Cleanup At Startup/Transmit/0D4EF4F0-653D-460C-BF8E-2BA811657E6F/TMTrackFinder.cc",
+		"/Users/dc14947/Library/Caches/Cleanup At Startup/Transmit/38D2E005-8FD5-4272-AADA-450962FB9E28/TMTrackFinder.cc",
+		"/Users/dc14947/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/DB1DC1D7-F74C-4B1D-8944-879A44144BE8/A Cooper Task 1 Code.txt",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 1/Brasnett/Matrix 1 copy/Matrix 1/main.c",
+		"/Users/dc14947/Google Drive/Teaching/Computing Lab 2015/Assignment 1/Atkinson/Final code.cc",
+		"/Users/dc14947/Downloads/Exercise 1 code.txt",
+		"/Users/dc14947/Downloads/TrackFinderAnalysis_12_09_14/TMTrackTrigger/TMTrackFinder/src/TMTrackFinderAlgorithm.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/Candidate.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/Efficiency_PU.cc",
+		"/Users/dc14947/Google Drive/Programming/Poisson.cc",
+		"/Users/dc14947/Google Drive/Università/Tesi Magistrale/Analisi/efficiency/efficienza.cc",
+		"/Users/dc14947/crab_step1.cfg",
+		"/Users/dc14947/Google Drive/Work/Tracking/TMTrackTrigger/TMTrackFinder/src/TMTrackFinderAlgorithm.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/Efficiency_lowpt.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/samples.txt",
+		"/Users/dc14947/crab_step1.py",
+		"/Users/dc14947/Desktop/prova.cc",
+		"/Users/dc14947/Google Drive/Università/Tesi Magistrale/Analisi/Histogram.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/EffArray.cc",
+		"/Users/dc14947/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/dc14947/Downloads/Exercise 1 Source Code/part 2.c",
+		"/Users/dc14947/Google Drive/Work/Tracking/Filtering.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/script_creator",
+		"/Users/dc14947/Google Drive/Work/Tracking/confronto_PU.cc",
+		"/Users/dc14947/Downloads/TrackFinderAnalysis_18_07_14/Demo/DemoAnalyzer/src/DemoAnalyzer.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/confronto_pT.cc",
+		"/Users/dc14947/Google Drive/Work/Tracking/Efficiency_pT.cc",
+		"/Users/dc14947/Google Drive/Work/Ian/efficiency_photons_v1.cc",
+		"/Users/dc14947/Google Drive/Università/Tesi Magistrale/Analisi/luminosity.cc",
+		"/Users/dc14947/Google Drive/Università/Tesi Magistrale/Analisi/confronto.cc"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/dc14947/Google Drive/Work/Tracking/UK-TrackTrig/software/cmssw/branch/Davide_2/TMTrackTrigger/TMTrackFinder/interface"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"TrackCollection",
+			"Sectors",
+			"Dphi",
+			"Bend",
+			"ectors",
+			"bend",
+			"rt",
+			"Dphi",
+			"dphi",
+			"Dphi",
+			"int             getDphiBits()             const {  return dphi_bits_               ;}\n  double          getDphiLowLimit()         const { return dphi_low_limit_           ;}",
+			"Rt",
+			"rt",
+			"Rt",
+			"Low",
+			"Z",
+			";}",
+			"Phi",
+			"dphi",
+			"rt",
+			"Dphi",
+			"Dph",
+			" Dphi",
+			"rt",
+			"Rt",
+			"rt",
+			"phi",
+			"65",
+			"z",
+			"65",
+			"hwR65",
+			"65",
+			"Phi",
+			"65",
+			"Phi",
+			"phi",
+			"Phi",
+			"phi",
+			"Phi",
+			"phi",
+			"Phi",
+			"phi",
+			"Phi",
+			"phi",
+			"Phi",
+			"getParameter",
+			"DataFormats",
+			"EtaRegions.",
+			"EtaRegions",
+			"dphi",
+			"Z",
+			";",
+			"return",
+			"_",
+			"->",
+			"getNEtaRegions",
+			"getNBetaSegments",
+			"Beta",
+			"5",
+			"Beta",
+			"Segments",
+			"Beta",
+			"beta",
+			"iConfig",
+			"segment",
+			"iConfig",
+			"Phi",
+			"Beta",
+			"iConfig.getUntrackedParameter",
+			"OutputSpec",
+			"->",
+			"Z",
+			"eta_segment_",
+			"_Sectors",
+			"segments",
+			"beta",
+			"Beta",
+			"beta_segment_",
+			" \n",
+			"-65",
+			"cout",
+			"endj",
+			"cout",
+			".r ",
+			"r",
+			"300",
+			"16",
+			"+",
+			"_x_",
+			"x",
+			"c_min",
+			"32",
+			"0",
+			"&& ncell ==1",
+			"(m_min,c_min)",
+			"bend",
+			"double",
+			"r",
+			"min",
+			"err",
+			"Transform(",
+			"r0",
+			"const std::vector <TP> &tplist, const std::vector<const TP *> &goodtplist, const HoughTransformations<HoughTF> &hts",
+			"FillDavide",
+			"kaons",
+			"pi",
+			"mu",
+			"h_e",
+			"_e",
+			"h_",
+			"hists_afterHTrz_",
+			"tp",
+			"tplist",
+			"_reg",
+			"alltplist",
+			"goodtp",
+			"alltp",
+			"tp_it",
+			"cells",
+			"goodtplist",
+			"0",
+			"cands",
+			"True",
+			"Segment :",
+			"FillDavide",
+			"FillHTHists",
+			"Transform",
+			"eta_id"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "PatternWriter.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
