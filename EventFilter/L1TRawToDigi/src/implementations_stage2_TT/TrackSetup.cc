@@ -45,7 +45,7 @@ namespace l1t {
                auto stubs_unp = UnpackerFactory::get()->make("phase2::StubUnpacker");
                
                UnpackerMap res;
-               if (fed == 1360){
+               if (fed == 1409){
                for (int link = 0; link < 144; link += 2)
                      res[link] = stubs_unp;
                }

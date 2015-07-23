@@ -5,14 +5,14 @@
 
 
 //#include "EventFilter/L1TRawToDigi/interface/UnpackerCollections.h"
-#include "L1TObjectCollections.h"
+#include "EventFilter/L1TRawToDigi/interface/UnpackerCollections.h"
 
 namespace l1t {
    namespace phase2 {
-     class TrackCollections : public L1TObjectCollections {
+     class TrackCollections : public UnpackerCollections {
          public:
             TrackCollections(edm::Event& e) :
-               L1TObjectCollections(e),
+               UnpackerCollections(e),
                stubs_(new StubBxCollection()),
                outstubs_(new StubBxCollection()) {};
 
