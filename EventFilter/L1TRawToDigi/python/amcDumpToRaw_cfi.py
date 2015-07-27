@@ -4,7 +4,7 @@ amcDumpToRaw = cms.EDProducer(
     "AMCDumpToRaw",
 
     filename         = cms.untracked.string("data_nohdr.txt"),
-    fedId            = cms.untracked.int32(1352),
+    fedId            = cms.untracked.int32(1409),
     iAmc             = cms.untracked.int32(1),
     boardId          = cms.untracked.int32(4109),
     eventType        = cms.untracked.int32(238),

@@ -75,38 +75,34 @@ process.TFileService.fileName = cms.string('l1t.root')
 
 # raw data from MP card
 process.load('EventFilter.L1TRawToDigi.stage2MP7BufferRaw_cfi')
-process.stage2Raw.nFramesOffset    = cms.untracked.int32(0)
-process.stage2Raw.nFramesLatency   = cms.untracked.int32(0)
-process.stage2Raw.rxFile = cms.untracked.string("rx_summary.txt")
-process.stage2Raw.txFile = cms.untracked.string("tx_summary.txt")
+# process.stage2MPRaw.nFramesOffset    = cms.untracked.int32(0)
+# process.stage2MPRaw.nFramesLatency   = cms.untracked.int32(0)
+process.stage2MPRaw.rxFile = cms.untracked.string("rx_summary.txt")
+process.stage2MPRaw.txFile = cms.untracked.string("tx_summary.txt")
 
 # dump raw data
 process.dumpRaw = cms.EDAnalyzer( 
     "DumpFEDRawDataProduct",
-    label = cms.untracked.string("stage2Raw"),
-    feds = cms.untracked.vint32 ( 1300 ),
+    label = cms.untracked.string("stage2MPRaw"),
+    feds = cms.untracked.vint32 ( 1409 ),
     dumpPayload = cms.untracked.bool ( True )
 )
 
 # raw to digi
-process.load('EventFilter.L1TRawToDigi.caloStage2Digis_cfi')
-process.caloStage2Digis.InputLabel = cms.InputTag('stage2Raw')
+process.load('EventFilter.L1TRawToDigi.trackPhase2Digis_cfi')
+process.trackPhase2Digis.InputLabel = cms.InputTag('stage2MPRaw')
 
 
-process.load('L1Trigger.L1TCalorimeter.l1tStage2CaloAnalyzer_cfi')
-process.l1tStage2CaloAnalyzer.towerToken = cms.InputTag("caloStage2Digis")
-process.l1tStage2CaloAnalyzer.clusterToken = cms.InputTag("caloStage2Digis")
-process.l1tStage2CaloAnalyzer.egToken = cms.InputTag("caloStage2Digis")
-process.l1tStage2CaloAnalyzer.tauToken = cms.InputTag("caloStage2Digis")
-process.l1tStage2CaloAnalyzer.jetToken = cms.InputTag("caloStage2Digis")
-process.l1tStage2CaloAnalyzer.etSumToken = cms.InputTag("caloStage2Digis")
+#process.load('L1Trigger.L1TCalorimeter.l1tStage2CaloAnalyzer_cfi')
+#process.l1tStage2CaloAnalyzer.towerToken = cms.InputTag("trackPhase2Digis")
+
 
 # Path and EndPath definitions
 process.path = cms.Path(
-    process.stage2Raw
+    process.stage2MPRaw
     +process.dumpRaw
-    +process.caloStage2Digis
-    +process.l1tStage2CaloAnalyzer
+    +process.trackPhase2Digis
+    
 )
 
 process.out = cms.EndPath(
