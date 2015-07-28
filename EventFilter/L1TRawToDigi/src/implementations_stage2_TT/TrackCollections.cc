@@ -6,8 +6,8 @@ namespace l1t {
    namespace phase2 {
       TrackCollections::~TrackCollections()
       {
-         event_.put(stubs_);
-         event_.put(outstubs_);
+         event_.put(stubs_,"Input");
+         event_.put(outstubs_,"Output");
         }
    }
 }

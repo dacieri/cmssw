@@ -10,8 +10,6 @@
 <class name="l1t::Stub"/>
 <class name="l1t::StubBxCollection"/>
 
-<class name="l1t::OutStub"/>
-<class name="l1t::OutStubBxCollection"/>
 
   <class name="l1t::Jet" ClassVersion="12">
    <version ClassVersion="12" checksum="380555501"/>
