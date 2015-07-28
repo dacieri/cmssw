@@ -1,5 +1,5 @@
-#ifndef DataFormats_L1TCalorimeter_Stub_h
-#define DataFormats_L1TCalorimeter_Stub_h
+#ifndef DataFormats_L1Calorimeter_Stub_h
+#define DataFormats_L1Calorimeter_Stub_h
 
 #include "DataFormats/L1Trigger/interface/L1Candidate.h"
 #include "DataFormats/L1Trigger/interface/BXVector.h"
@@ -10,8 +10,8 @@ namespace l1t {
   typedef BXVector<Stub> StubBxCollection;
   typedef BXVector<Stub> OutStubBxCollection;
     
-  //class Stub : public L1Candidate {
-  class Stub{
+  class Stub : public L1Candidate {
+  //class Stub{
 
 
     
