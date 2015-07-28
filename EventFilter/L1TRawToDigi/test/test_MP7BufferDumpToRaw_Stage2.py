@@ -77,8 +77,8 @@ process.TFileService.fileName = cms.string('l1t.root')
 process.load('EventFilter.L1TRawToDigi.stage2MP7BufferRaw_cfi')
 process.stage2Raw.nFramesOffset    = cms.untracked.int32(0)
 process.stage2Raw.nFramesLatency   = cms.untracked.int32(0)
-process.stage2Raw.rxFile = cms.untracked.string("stage2_rx_summary.txt")
-process.stage2Raw.txFile = cms.untracked.string("stage2_tx_summary.txt")
+process.stage2Raw.rxFile = cms.untracked.string("rx_summary.txt")
+process.stage2Raw.txFile = cms.untracked.string("tx_summary.txt")
 
 # dump raw data
 process.dumpRaw = cms.EDAnalyzer( 
