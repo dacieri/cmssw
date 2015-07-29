@@ -1,5 +1,5 @@
-#ifndef DataFormats_L1Calorimeter_Stub_h
-#define DataFormats_L1Calorimeter_Stub_h
+#ifndef DataFormats_L1TrackTrigger_Stub_h
+#define DataFormats_L1TrackTrigger_Stub_h
 
 #include "DataFormats/L1Trigger/interface/L1Candidate.h"
 #include "DataFormats/L1Trigger/interface/BXVector.h"
