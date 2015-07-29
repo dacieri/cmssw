@@ -74,7 +74,7 @@ process.TFileService.fileName = cms.string('l1t.root')
 # user stuff
 
 # raw data from MP card
-process.load('EventFilter.L1TRawToDigi.amcDumpToRaw_cfi')
+process.load('EventFilter.L1TRawToDigi.amcDumpToRawTT_cfi')
 
 # dump raw data
 process.dumpRaw = cms.EDAnalyzer( 
