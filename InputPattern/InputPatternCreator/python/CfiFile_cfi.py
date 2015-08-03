@@ -9,7 +9,7 @@ producer = cms.EDProducer('InputPatternCreator',
 		nHeaderFrames         = cms.untracked.uint32(1), # Number of Empty header frames per each phi sector
 		nPayloadFrames        = cms.untracked.uint32(288), # Number of payload frames assigned to each phi sector
 		nClearFrames          = cms.untracked.uint32(6), # Number of empty frames at the end of each eta region
-    nEventsPerFile        = cms.uint32(4) # Number of events to be written in a single file
+        nEventsPerFile        = cms.uint32(3) # Number of events to be written in a single file
     ),
 
 	PhiSectors = cms.PSet(
@@ -35,15 +35,15 @@ producer = cms.EDProducer('InputPatternCreator',
         Splitting         = cms.int32(0), # 0 Splitting over clock cycles (frames), 1 Splitting over links 
         SegmentBits			   = cms.int32(6),
     	PhiSBits               = cms.int32(12), # Number of Bits for phi
-        PhiSMultiplier         = cms.int32(1000),
+        PhiSMultiplier         = cms.int32(4096),
         ZBits                  = cms.int32(12), # Number of bits for z
-        ZMultiplier            = cms.int32(7),
+        ZMultiplier            = cms.int32(4),
         RtBits                 = cms.int32(9),  # Number of bits for R65
-        RtMultiplier           = cms.int32(4),
-        DphiBits			   = cms.int32(6),
-        DphiMultiplier         = cms.int32(10),
+        RtMultiplier           = cms.int32(2),
+        DphiBits			   = cms.int32(8),
+        DphiMultiplier         = cms.int32(256),
         RhoBits				   = cms.int32(6),
-        RhoMultiplier          = cms.int32(5)
+        RhoMultiplier          = cms.int32(256)
     ),
 
   Debug                 	  = cms.bool(True) # Print some debug statements

@@ -43,8 +43,9 @@ InputData::InputData(const edm::Event& iEvent, const edm::EventSetup& iSetup, Se
       HwStub hwstub;
       FillHwStub(ttStubRef, stackedGeometry, settings, hwstub);
       // Also fill truth associating stubs to tracking particles.
-      vHwStubs_.push_back( hwstub );
-      stubCount++;
+      if(fabs(hwstub.eta())<=settings->getEtaCut()){
+              vHwStubs_.push_back( hwstub );
+            stubCount++;}
     }
   }
 
@@ -109,6 +110,8 @@ void InputData::FillHwStub(TTStubRef tf, const StackedTrackerGeometry*  stackedG
   int hwRho = (int)(rho*settings->getRhoMultiplier()); 
   int hwDphi = (int)(dphi*settings->getDphiMultiplier());
    
+
+  
   hwstub.setRho(hwRho);
   hwstub.setDphi(hwDphi);
   hwstub.setRt(hwRt);
@@ -119,6 +122,7 @@ void InputData::FillHwStub(TTStubRef tf, const StackedTrackerGeometry*  stackedG
   hwstub.setDoubleBend(bend);
   hwstub.setDphi(dphi);
   hwstub.setRerr(rErr_);
+  hwstub.setEta(pos.eta());
 
   
 }

@@ -26,6 +26,8 @@ public:
   unsigned        getNClearFrames()       const {  return nClearFrames_          ;}
   int             getEventsPerFile()      const {  return nEventsPerFile_        ;}
 
+  double          getEtaCut()             const {  return eta_cut_               ;}
+
   vector<double>  getEtaRegions()         const {  return eta_regions_           ;}
   bool            getSingleSegment()      const {  return single_segment_        ;}
   bool            getSingleRegion()       const {  return single_region_         ;}
@@ -71,6 +73,7 @@ public:
 
 private:
   edm::ParameterSet OutputSpec_;
+  edm::ParameterSet StubCut_;
   edm::ParameterSet PhiSectors_;
   edm::ParameterSet EtaRegions_;
   edm::ParameterSet DataFormats_;
@@ -85,7 +88,12 @@ private:
   unsigned nPayloadFrames_;
   unsigned nClearFrames_;
   int      nEventsPerFile_;
+  
+
+  double eta_cut_;
+
   // Phi Sector parameters
+
   int n_phi_segments_;
   bool single_segment_; 
   int phi_segment_;

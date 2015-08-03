@@ -13,6 +13,7 @@ Settings::Settings(const edm::ParameterSet& iConfig)
 
   OutputSpec_     = iConfig.getParameter< edm::ParameterSet >   ( "OutputSpec"            );
   PhiSectors_     = iConfig.getParameter< edm::ParameterSet >   ( "PhiSectors"            );
+  StubCut_        = iConfig.getParameter< edm::ParameterSet >   ( "StubsCut"                );
   EtaRegions_     = iConfig.getParameter< edm::ParameterSet >   ( "EtaRegions"            );
   DataFormats_    = iConfig.getParameter< edm::ParameterSet >   ( "DataFormats"            );
 
@@ -24,6 +25,8 @@ Settings::Settings(const edm::ParameterSet& iConfig)
   nClearFrames_   = OutputSpec_.getUntrackedParameter<unsigned>     ("nClearFrames"      );
   nEventsPerFile_ = OutputSpec_.getParameter<unsigned int>          ("nEventsPerFile"    );
   
+  eta_cut_        = StubCut_.getParameter<double>              ("EtaCut");
+
   n_phi_segments_ = PhiSectors_.getParameter<unsigned int>     ( "NumPhiSectors"         );
   single_segment_ = PhiSectors_.getParameter<bool>             ( "SingleSegment"         );
   phi_segment_    = PhiSectors_.getParameter<int>              ( "PhiSegment"            );

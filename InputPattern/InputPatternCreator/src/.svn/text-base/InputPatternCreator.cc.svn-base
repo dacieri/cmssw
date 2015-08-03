@@ -19,7 +19,7 @@ InputPatternCreator::InputPatternCreator(const edm::ParameterSet& iConfig)
   
   LogDebug("L1TDebug") << "Preparing for " << nLink_ << " links" << std::endl;
 
-  nevent_=0;
+  nevent_=1;
 
   produces<StubCollection>( "inputStubs" ).setBranchAlias("inputStubs");
 }
@@ -39,7 +39,7 @@ InputPatternCreator::produce( edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
 
   // Initialize the nFrame array
-  if((nevent_)%2==0){
+  if((nevent_)==1 || (nevent_-1)%(settings_->getEventsPerFile())==0){
     for (unsigned int i = 0; i < settings_->getNEtaRegions(); i++)
     {
       nFrame_[i]=0;
@@ -77,7 +77,8 @@ InputPatternCreator::produce( edm::Event& iEvent, const edm::EventSetup& iSetup)
       vector<HwStub>::const_iterator stub = vhwStubs.begin();
       for ( ; stub != vhwStubs.end(); stub++ ) {
         // Check if stub is inside this sector
-        
+                
+
         bool inside = sector.inside( *stub );
         // If so, then store it in the correspondent hwstub array for this sector.
         if (inside) {
@@ -91,7 +92,7 @@ InputPatternCreator::produce( edm::Event& iEvent, const edm::EventSetup& iSetup)
           hws.setPhiS(hwphi); 
           // mStubs(iPhiSec, iEtaReg).push_back(hws);
           StoredStubs[iEtaReg].push_back(hws);
-
+          
           l1t::Stub st(hws.hwSegment(), hws.hwPhiS(), hws.hwRt(), hws.hwZ(), hws.hwDphi(), hws.hwRho(), 0, 0, 0);
           inputStubs->push_back(st);
           stub_in_sector++;
@@ -99,6 +100,9 @@ InputPatternCreator::produce( edm::Event& iEvent, const edm::EventSetup& iSetup)
       }
       // cout << "Stubs in sector ("<<iEtaReg<<","<<iPhiSec<<") :"<< stub_in_sector << endl;
     }
+
+    l1t::Stub st(48,0.1,0,0,0,0,0,0,0);
+    inputStubs->push_back(st);
   }
 
   iEvent.put( inputStubs, "inputStubs" );
@@ -115,9 +119,10 @@ InputPatternCreator::produce( edm::Event& iEvent, const edm::EventSetup& iSetup)
 
   
 
-  if((nevent_-1)%settings_->getEventsPerFile()==0)
+  if((nevent_)%settings_->getEventsPerFile()==0){
+    cout << "nevent_ = " <<nevent_ << endl;
     write_file();
-
+  }
   nevent_++;
 
 }
@@ -189,16 +194,22 @@ void InputPatternCreator::WriteDataOverFrames(std::vector<HwStub> StoredStubs[])
           // Stub data are splitted in two links, so we increase the index i any two links
           if((k+2)%2==0){           
             data |= (stub.hwRt() & (int(pow(2.,double(settings_->getRtBits())))-1));//writing R65
+            
+            // if(stub.r()-45<0)
+            //   cout << "Rt negativa " << hex << data << endl;
+            // else
+            //   cout << "Rt positiva " << hex << data << endl; 
+
             data |= (stub.hwDphi() & (int(pow(2.,double(settings_->getDphiBits())))-1)) << settings_->getRtBits();//writing the Dphi information
             data |= (stub.hwRho() & (int(pow(2.,double(settings_->getRhoBits())))-1)) << (settings_->getRtBits() + settings_->getDphiBits());//writing the Dphi information
-            
+
+
           }
           else{
             data |= stub.hwSegment() & (int(pow(2., double(settings_->getSegmentBits())) -1 ) );
 
             data |= (stub.hwPhiS() & (int(pow(2.,double(settings_->getPhiSBits()))) -1)) << settings_->getSegmentBits(); // Writing the phi information
             data |= (stub.hwZ() & (int(pow(2.,double(settings_->getZBits())))-1)) << (settings_->getPhiSBits()+ settings_->getSegmentBits());//writing z          
-            
           } 
 
           data_[iEtaReg].at(iLink).push_back( data );
@@ -207,7 +218,7 @@ void InputPatternCreator::WriteDataOverFrames(std::vector<HwStub> StoredStubs[])
       }
 
       nFrame_[iEtaReg]++;
-      if(i>=StoredStubs[iEtaReg].size()+72)
+      if(i>=StoredStubs[iEtaReg].size()+144)
         break;
     }
    
@@ -298,7 +309,7 @@ void InputPatternCreator::WriteDataOverLinks(std::vector<HwStub> StoredStubs[]){
       }
 
       nFrame_[iEtaReg]++;
-      if(i>=StoredStubs[iEtaReg].size()+72)
+      if(i>=StoredStubs[iEtaReg].size()+144)
         break;
     }
    
@@ -335,7 +346,7 @@ void InputPatternCreator::write_file()
 // Loop over the trigger regions
   for (unsigned int i = 0; i < settings_->getNEtaRegions(); i++)
   {
-    cout << "data size "<< data_[i].size() << endl;
+    
 
   LogDebug("L1TDebug") << "Read " << nFrame_[i] << " frames" << std::endl;
   std::ostringstream filename;

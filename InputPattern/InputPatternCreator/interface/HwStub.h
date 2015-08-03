@@ -38,6 +38,7 @@ class HwStub{
   void setDoubleBend( double et ) { bend_ = et;}
   void setDoubleDphi( double et) { dphi_ = et;}
   void setRerr(double et) { rErr_ = et;}
+  void setEta( double et ) { eta_ = et;}
   
   int hwPhiS()           const{   return hwPhiS_;    }
   int hwZ()              const{   return hwZ_;       }
@@ -51,6 +52,7 @@ class HwStub{
   double phi()           const{   return phi_;       }
   double dphi()          const{   return dphi_;      }
   double bend()          const{   return bend_;      }
+  double eta()           const{   return eta_;       }
 
 
   std::pair <float, float>trkPhiAtR(float et) const;
@@ -70,6 +72,7 @@ class HwStub{
   double z_;
   double rErr_;
   double bend_;
+  double eta_;
   
 };
   
