@@ -1,0 +1,7 @@
+<lcgdict>
+
+  <class name="l1t::Stub"/>
+  <class name="l1t::StubBxCollection"/>
+  <class name="edm::Wrapper<l1t::StubBxCollection>"/>
+  <class name="edm::Wrapper<std::vector<l1t::Stub> >"/>
+</lcgdict>
