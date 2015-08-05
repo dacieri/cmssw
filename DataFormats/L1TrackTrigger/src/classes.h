@@ -1,10 +1,3 @@
-#ifndef DataFormats_L1TrackTrigger_classes_h
-#define DataFormats_L1TrackTrigger_classes_h
-
-#include "DataFormats/L1TrackTrigger/interface/Stub.h"
-#include "DataFormats/Common/interface/Wrapper.h"
-#include "DataFormats/Common/interface/RefVector.h"
-#include "DataFormats/Common/interface/RefProd.h"
 #include "Rtypes.h"
 #include "Math/Cartesian3D.h"
 #include "Math/Polar3D.h"
@@ -14,13 +7,24 @@
 #include "DataFormats/L1GlobalCaloTrigger/interface/L1GctCand.h"
 
 
-namespace DataFormats_L1Trigger {
+#include "DataFormats/Common/interface/Wrapper.h"
+#include "DataFormats/Common/interface/RefVector.h"
+#include "DataFormats/Common/interface/RefProd.h"
+#include "DataFormats/L1Trigger/interface/BXVector.h"
+
+//#include "DataFormats/L1TrackTrigger/interface/CaloSpare.h"
+#include "DataFormats/L1TrackTrigger/interface/Cell.h"
+
+
+namespace DataFormats_L1TrackTrigger {
   struct dictionary {
 
-    l1t::StubBxCollection    stubBxColl;
-    edm::Wrapper<l1t::StubBxCollection>    w_stubBxColl;
+        l1t::StubBxCollection    stubBxColl;
+
+        edm::Wrapper<l1t::StubBxCollection>    w_stubBxColl;
+
+
 
   };
 }
 
-#endif
