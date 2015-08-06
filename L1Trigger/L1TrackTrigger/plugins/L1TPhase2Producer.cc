@@ -1,4 +1,3 @@
-
 // -*- C++ -*-
 //
 // Package:    L1Trigger/skeleton
@@ -10,7 +9,7 @@
      [Notes on implementation]
 */
 //
-// Original Author:  Tom James
+// Original Author:  James Brooke
 //         Created:  Thu, 05 Dec 2013 17:39:27 GMT
 //
 //
@@ -40,8 +39,6 @@
 
 #include "DataFormats/L1TrackTrigger/interface/Stub.h"
 
-
-
 //
 // class declaration
 //
@@ -63,13 +60,15 @@ using namespace l1t;
     
     virtual void beginRun(edm::Run const&, edm::EventSetup const&) override;
     virtual void endRun(edm::Run const&, edm::EventSetup const&) override;
-    //virtual void beginLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&) override;
-    //virtual void endLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&) override;
+    //virtual void beginLuminosityBlock(edm::LuminosityBlock const&, 
+    //edm::EventSetup const&) override;
+    //virtual void endLuminosityBlock(edm::LuminosityBlock 
+    //const&, edm::EventSetup const&) override;
     
     // ----------member data ---------------------------
 
     // input token
-   // edm::EDGetToken m_towerToken;
+    edm::EDGetToken m_stubToken;
 
     // parameters
     unsigned long long m_paramsCacheId;
@@ -83,12 +82,12 @@ using namespace l1t;
   }; 
   
 
+
 L1TPhase2Producer::L1TPhase2Producer(const edm::ParameterSet& ps) {
 
   // register what you produce
+  produces<StubBxCollection> ("MP");
 
-	produces<StubBxCollection> ("MP");
-  produces<OutStubBxCollection> ("MP");
   
   // register what you consume and keep token for later access:
   m_stubToken = consumes<StubBxCollection>(ps.getParameter<edm::InputTag>("stubToken"));
@@ -123,52 +122,44 @@ L1TPhase2Producer::produce(edm::Event& iEvent, const edm::EventSetup& iSetup)
   int bxFirst = stubs->getFirstBX();
   int bxLast = stubs->getLastBX();
 
-  LogDebug("L1TrackTriggerDebug") << "First BX=" << bxFirst <<
-   ", last BX=" << bxLast << std::endl;
+  LogDebug("L1TDebug") << "First BX=" << bxFirst << ", last BX=" << bxLast << std::endl;
   
   //outputs
-    std::auto_ptr<StubBxCollection> stubs (new StubBxCollection(0, bxFirst, bxLast));
-    std::auto_ptr<StubBxCollection> outstubs (new StubBxCollection(0, bxFirst, bxLast));
-
+  std::auto_ptr<StubBxCollection> outStubs (new StubBxCollection(0, bxFirst, bxLast));
 
   
   // loop over BX
   for(int ibx = bxFirst; ibx < bxLast+1; ++ibx) {
-
     std::auto_ptr< std::vector<Stub> > localStubs (new std::vector<Stub>);
     std::auto_ptr< std::vector<Stub> > localOutStubs (new std::vector<Stub>);
-
+   
     
-    LogDebug("L1TrackTriggerDebug") << "BX=" 
-    << ibx << ", N(Stubs)=" << stubs->size(ibx) << std::endl;
+    LogDebug("L1TDebug") << "BX=" << ibx << ", N(Stubs)=" << stubs->size(ibx) << std::endl;
 
-    for(std::vector<Stubs>::const_iterator stub = stubs->begin(ibx);
+    for(std::vector<Stub>::const_iterator stub = stubs->begin(ibx);
 	stub != stubs->end(ibx);
 	++stub) {
       localStubs->push_back(*stub);
     }
 
-    LogDebug("L1TrackTriggerDebug") << "BX=" 
-    << ibx << ", N(Stubs)=" << localStubs->size() << std::endl;    
+    LogDebug("L1TDebug") << "BX=" << ibx << ", N(Stubs)=" << localStubs->size() << std::endl;    
 
-    m_processor->processEvent(
-    *localStubs,
-	*localOutStubs
-			     
-			      );
+    m_processor->processEvent(*localStubs,
+			      *localOutStubs
+);
     
-    for(std::vector<Stub>::const_iterator stub = localStubs->begin();
-     stub != localStubs->end(); ++stub) stubs->push_back(ibx, *stub);
-     
-    for(std::vector<Stub>::const_iterator outstub = localOutStubs->begin();
-     outstub != localOutStubs->end(); ++outstub) outstubs->push_back(ibx, *outstub);
+    for(std::vector<Stub>::const_iterator stu = localOutStubs->begin(); 
+    stu != localOutStubs->end(); ++stu) outStubs->push_back(ibx, *stu);
 
-    LogDebug("L1TrackTriggerDebug") << "BX=" << ibx << ", N(stubs)=" << localStubs->size()
-     << std::endl;    
+
+
+    LogDebug("L1TDebug") << "BX=" << ibx << ", N(Stub)=" 
+    << localStubs->size() << std::endl;    
 
   }
-  iEvent.put(stubs, "MP");
-  iEvent.put(outstubs, "MP");
+  
+  iEvent.put(outStubs, "MP");
+
   
 }
 
@@ -193,14 +184,14 @@ L1TPhase2Producer::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetup)
 
   // parameters
 
-  unsigned long long id = iSetup.get<L1TCaloParamsRcd>().cacheIdentifier();  
+ /* unsigned long long id = iSetup.get<L1TCaloParamsRcd>().cacheIdentifier();  
   
   if (id != m_paramsCacheId) {
 
     m_paramsCacheId = id;
 
     edm::ESHandle<TrackTriggerParams> paramsHandle;
-    iSetup.get<L1TTrackTriggerParamsRcd>().get(paramsHandle);
+    iSetup.get<L1TCaloParamsRcd>().get(paramsHandle);
 
     // replace our local copy of the parameters with a new one using placement new
     m_params->~TrackTriggerParams();
@@ -209,12 +200,11 @@ L1TPhase2Producer::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetup)
     LogDebug("L1TDebug") << *m_params << std::endl;
 
     if (! m_params){
-      edm::LogError("l1t|tracktriggerPhase2") << 
-      "Could not retrieve params from Event Setup" 
+      edm::LogError("l1t|tracktriggerPhase2") << "Could not retrieve params from Event Setup" 
       << std::endl;            
     }
 
-  }
+  }*/
 
   // firmware
 
@@ -227,11 +217,11 @@ L1TPhase2Producer::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetup)
     
     if (! m_processor) {
       // we complain here once per run
-      edm::LogError("l1t|tracktriggerPhase2") << "Firmware could not be configured.\n";
+      edm::LogError("l1t|tracktriggerStage2") 
+      << "Firmware could not be configured.\n";
     }
     
-    LogDebug("L1TrackTriggerDebug") << "Processor object : "
-     << (m_processor?1:0) << std::endl;
+    LogDebug("L1TDebug") << "Processor object : " << (m_processor?1:0) << std::endl;
     
   }
   
@@ -248,7 +238,7 @@ L1TPhase2Producer::endRun(edm::Run const&, edm::EventSetup const&)
 // ------------ method called when starting to processes a luminosity block  ------------
 /*
 void
-L1TStage2Layer2Producer::beginLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup cons
+L1TPhase2Producer::beginLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup cons
 t&)
 {
 }
@@ -257,7 +247,7 @@ t&)
 // ------------ method called when ending the processing of a luminosity block  ------------
 /*
 void
-L1TStage2Layer2Producer::endLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&
+L1TPhase2Producer::endLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&
 )
 {
 }

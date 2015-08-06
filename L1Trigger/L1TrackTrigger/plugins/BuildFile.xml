@@ -10,8 +10,9 @@
 <use   name="DataFormats/HcalDetId"/>
 <use   name="CalibFormats/CaloTPG"/>
 <use   name="CalibCalorimetry/EcalTPGTools"/>
-<use   name="DataFormats/L1Trigger"/>
+<use   name="DataFormats/L1TCalorimeter"/>
 <use   name="DataFormats/L1CaloTrigger"/>
+<use   name="DataFormats/L1Trigger"/>
 <use   name="DataFormats/L1TrackTrigger"/>
 <use   name="DataFormats/JetReco"/>
 <use   name="DataFormats/METReco"/>
@@ -19,6 +20,6 @@
 <use   name="CondFormats/DataRecord"/>
 <use   name="L1Trigger/L1TrackTrigger"/>
 <use   name="CondTools/L1Trigger"/>
-<library   file="*.cc" name="L1TriggerL1TCalorimeterPlugins">
+<library   file="*.cc" name="L1TriggerL1TrackTriggerPlugins">
   <flags   EDM_PLUGIN="1"/>
 </library>
