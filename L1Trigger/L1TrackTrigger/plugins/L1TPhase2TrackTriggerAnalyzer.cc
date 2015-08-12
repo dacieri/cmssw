@@ -106,17 +106,26 @@ private:
 {
    //now do what ever initialization is needed
 
+std::cout << "Track Trigger Analyzer constructed" << std::endl;
   // register what you consume and keep token for later access:
   edm::InputTag nullTag("None");
+std::cout << "Track Trigger Analyzer Constructor debug1" << std::endl;
 
   edm::InputTag stubTag = iConfig.getParameter<edm::InputTag>("stubToken");
+std::cout << "Track Trigger Analyzer Constructor debug2" << std::endl;
+
   m_stubToken         = consumes<l1t::StubBxCollection>(stubTag);
+std::cout << "Track Trigger Analyzer Constructor debug3" << std::endl;
+
   m_doStubs           = !(stubTag==nullTag);
 
+std::cout << "Track Trigger Analyzer Constructor debug4" << std::endl;
   
     types_.push_back( MPStub );
+std::cout << "Track Trigger Analyzer Constructor debug5" << std::endl;
 
     typeStr_.push_back( "stub" );
+std::cout << "Track Trigger Analyzer Constructor debug6" << std::endl;
 
 
 }
@@ -124,6 +133,7 @@ private:
 
 L1TPhase2TrackTriggerAnalyzer::~L1TPhase2TrackTriggerAnalyzer()
 {
+std::cout << "Track Trigger Analyzer destruction" << std::endl;
  
    // do anything here that needs to be done at desctruction time
    // (e.g. close files, deallocate resources etc.)
@@ -139,6 +149,8 @@ L1TPhase2TrackTriggerAnalyzer::~L1TPhase2TrackTriggerAnalyzer()
 void
 L1TPhase2TrackTriggerAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
+
+std::cout << "Track Trigger Analyzer:: analyze started" << std::endl;
   using namespace edm;
 
   std::stringstream text;
@@ -194,19 +206,34 @@ void
 L1TPhase2TrackTriggerAnalyzer::beginJob()
 {
 
+std::cout << "Track Trigger Analyzer begin job" << std::endl;
+
   edm::Service<TFileService> fs;
 
+std::cout << "Track Trigger Analyzer begin job debug 1" << std::endl;
+
+
   auto itr = types_.cbegin();
+std::cout << "Track Trigger Analyzer begin job debug 2" << std::endl;
+
   auto str = typeStr_.cbegin();
+std::cout << "Track Trigger Analyzer begin job debug 3" << std::endl;
 
   for (; itr!=types_.end(); ++itr, ++str ) {
+std::cout << "Track Trigger Analyzer begin job debug 4" << std::endl;
     
    
 
   }
 
+std::cout << "Track Trigger Analyzer begin job debug 5" << std::endl;
+
   if (doEvtDisp_) {
+std::cout << "Track Trigger Analyzer begin job debug 6" << std::endl;
+
     evtDispDir_ = fs->mkdir("Events");
+std::cout << "Track Trigger Analyzer begin job debug 7" << std::endl;
+
   }
 
 }
@@ -215,6 +242,7 @@ L1TPhase2TrackTriggerAnalyzer::beginJob()
 void 
 L1TPhase2TrackTriggerAnalyzer::endJob() 
 {
+std::cout << "Track Trigger Analyzer end job" << std::endl;
 }
 
 // ------------ method called when starting to processes a run  ------------
@@ -258,9 +286,15 @@ L1TPhase2TrackTriggerAnalyzer::fillDescriptions
 (edm::ConfigurationDescriptions& descriptions) {
   //The following says we do not know what parameters are allowed so do no validation
   // Please change this to state exactly what you do use, even if it is no parameters
+std::cout << "Track Trigger Analyzer fillDescriptions" << std::endl;
   edm::ParameterSetDescription desc;
+std::cout << "Track Trigger Analyzer fillDescriptions debug 1" << std::endl;
   desc.setUnknown();
+std::cout << "Track Trigger Analyzer fillDescriptions debug 2" << std::endl;
+
   descriptions.addDefault(desc);
+std::cout << "Track Trigger Analyzer fillDescriptions debug 3" << std::endl;
+
 }
 
 }

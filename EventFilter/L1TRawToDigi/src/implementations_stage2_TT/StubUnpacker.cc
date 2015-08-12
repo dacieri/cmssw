@@ -71,8 +71,8 @@ namespace phase2 {
         stub.setrT(raw_data & 0x1FF);
         stub.setdphi((raw_data >> 9) & 0x3F);
         stub.setrho((raw_data >> 15)& 0x3F );
-        stub.setm_coordinate((raw_data >> 21) & 0x3F);
-        stub.setc_coordinate((raw_data >> 27) & 0x1F);
+        stub.setm_bin((raw_data >> 21) & 0x3F);
+        stub.setc_bin((raw_data >> 27) & 0x1F);
       }
 
      /* LogDebug("L1T") << "Stub : Segment " << stub.S()
@@ -83,8 +83,8 @@ namespace phase2 {
       << " z " << stub.z()
       << " dphi " << stub.dphi()
       << " rho " << stub.rho()
-      << " m_coordinate " << stub.m_coordinate()
-      << " c_coordinate " << stub.c_coordinate();*/
+      << " m_bin " << stub.m_bin()
+      << " c_bin " << stub.c_bin();*/
 
       if(stub.S()==48){
         bx++;

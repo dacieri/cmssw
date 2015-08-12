@@ -4,15 +4,15 @@
 
 
 l1t::Stub::Stub(
-                                unsigned int S,
+                                int S,
                                 int phiS,
                                 int rT,
                                 int z,
         int dphi,
-        unsigned int rho,
+         int rho,
         int dphi_reduced,
-        unsigned int m_bin,
-        unsigned int c_bin
+        int m,
+        int c
 
                                 )
   : 
@@ -23,8 +23,8 @@ l1t::Stub::Stub(
     dphi_(dphi),
     rho_(rho),
     dphi_reduced_(dphi_reduced),
-    m_bin_(m_bin),
-    c_bin_(c_bin)
+    m_(m),
+    c_(c)
 
 {
   

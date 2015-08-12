@@ -85,6 +85,7 @@ using namespace l1t;
 
 L1TPhase2Producer::L1TPhase2Producer(const edm::ParameterSet& ps) {
 
+std::cout<< "L1T Phase2 Producer constructor" << std::endl;
   // register what you produce
   produces<StubBxCollection> ("MP");
 
