@@ -1,0 +1,5 @@
+150202_131613: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_11_1_patch1/python/crab.py -create -cfg crab_step2.cfg
+150202_131805: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_11_1_patch1/python/crab.py -submit -continue ttbar/DIGI/PU140/
+150203_153153: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_11_1_patch1/python/crab.py -status -continue ttbar/DIGI/PU140/
+150203_153232: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_11_1_patch1/python/crab.py -getoutput -continue ttbar/DIGI/PU140/
+150203_153521: /afs/cern.ch/cms/ccs/wm/scripts/Crab/CRAB_2_11_1_patch1/python/crab.py -publish -continue ttbar/DIGI/PU140/

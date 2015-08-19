@@ -1,0 +1,16 @@
+
+# in: /afs/cern.ch/user/d/dcieri/Generator/CMSSW_6_2_0_SLHC12/src dryRun for 'cd 13639_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel
+ cmsDriver.py TTbar_Tauola_14TeV_cfi  --conditions auto:upgradePLS3 -n 10 --eventcontent FEVTDEBUG --relval 9000,100 -s GEN,SIM --datatier GEN-SIM --beamspot Gauss --customise SLHCUpgradeSimulations/Configuration/combinedCustoms.cust_2023Pixel --geometry Extended2023Pixel,Extended2023PixelReco --magField 38T_PostLS1 --fileout file:step1.root  > step1_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel.log  2>&1
+ 
+
+# in: /afs/cern.ch/user/d/dcieri/Generator/CMSSW_6_2_0_SLHC12/src dryRun for 'cd 13639_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel
+ cmsDriver.py step2  --conditions auto:upgradePLS3 -n 10 --eventcontent FEVTDEBUGHLT -s DIGI:pdigi_valid,L1,DIGI2RAW --datatier GEN-SIM-DIGI-RAW --customise SLHCUpgradeSimulations/Configuration/combinedCustoms.cust_2023Pixel --geometry Extended2023Pixel,Extended2023PixelReco --magField 38T_PostLS1 --filein file:step1.root  --fileout file:step2.root  > step2_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel.log  2>&1
+ 
+
+# in: /afs/cern.ch/user/d/dcieri/Generator/CMSSW_6_2_0_SLHC12/src dryRun for 'cd 13639_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel
+ cmsDriver.py step3  --conditions auto:upgradePLS3 -n 10 --eventcontent FEVTDEBUGHLT,DQM -s RAW2DIGI,L1Reco,RECO,VALIDATION,DQM --datatier GEN-SIM-RECO,DQM --customise SLHCUpgradeSimulations/Configuration/combinedCustoms.cust_2023Pixel --geometry Extended2023Pixel,Extended2023PixelReco --magField 38T_PostLS1 --filein file:step2.root  --fileout file:step3.root  > step3_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel.log  2>&1
+ 
+
+# in: /afs/cern.ch/user/d/dcieri/Generator/CMSSW_6_2_0_SLHC12/src dryRun for 'cd 13639_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel
+ cmsDriver.py step4  --conditions auto:upgradePLS3 --scenario pp -s HARVESTING:validationHarvesting+dqmHarvesting --customise SLHCUpgradeSimulations/Configuration/combinedCustoms.cust_2023Pixel --geometry Extended2023Pixel,Extended2023PixelReco --mc  --magField 38T_PostLS1 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_TTbar_14TeV+TTbar_Tauola_14TeV_Extended2023Pixel_GenSimFull+DigiFull_Extended2023Pixel+RecoFull_Extended2023Pixel+HARVESTFull_Extended2023Pixel.log  2>&1
+ 
