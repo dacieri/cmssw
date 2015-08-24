@@ -19,9 +19,13 @@
 namespace DataFormats_L1TrackTrigger {
   struct dictionary {
 
-        l1t::StubBxCollection    stubBxColl;
+        //l1t::StubBxCollection    stubBxColl;
+	    std::vector<l1t::Stub> StubColl;
+     	edm::Wrapper<std::vector<l1t::Stub> > w_StubColl;
 
-        edm::Wrapper<l1t::StubBxCollection>    w_stubBxColl;
+        //edm::Wrapper<l1t::StubBxCollection>    w_stubBxColl;
+        l1t::CellBxCollection cellBxColl;
+        edm::Wrapper<l1t::CellBxCollection> w_cellBxColl;
 
 
 

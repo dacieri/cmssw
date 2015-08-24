@@ -7,6 +7,8 @@
 
 
 namespace l1t {
+    typedef BXVector<Stub> CellBxCollection;
+
 class Stub;
 
 class Cell{

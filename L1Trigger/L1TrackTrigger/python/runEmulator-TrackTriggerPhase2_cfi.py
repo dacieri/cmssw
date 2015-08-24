@@ -55,7 +55,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 # Input source
-inFile = 'file:../data/input/TTBar_PU140_hwEDM_numEvent100.root'
+inFile = 'file:PU0_numEvent100.root'
 process.source = cms.Source("PoolSource",
     fileNames=cms.untracked.vstring(inFile),
     skipEvents=cms.untracked.uint32(options.skipEvents)
@@ -70,13 +70,13 @@ process.options = cms.untracked.PSet(
 process.output = cms.OutputModule(
     "PoolOutputModule",
     outputCommands = cms.untracked.vstring("keep *"),
-    fileName = cms.untracked.string('../data/output/PU140_numEvent100_simEDM.root')
+    fileName = cms.untracked.string('PU140_numEvent100_simEDM.root')
 )
 
 # Additional output definition
 # TTree output file
 process.load("CommonTools.UtilAlgos.TFileService_cfi")
-process.TFileService.fileName = cms.string('../data/output/PU140_numEvent100_simEDM.root')
+process.TFileService.fileName = cms.string('PU140_numEvent100_simEDM.root')
 
 # enable debug message logging for our modules
 process.MessageLogger = cms.Service(
